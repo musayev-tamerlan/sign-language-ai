@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sign Language AI</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 15px;
+      background: #111;
+      transform: scaleX(-1);
+    }
+
+    button {
+      padding: 12px 24px;
+      margin: 15px;
+      cursor: pointer;
+    }
+
+    #result {
+      font-size: 24px;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🤟 Sign Language AI</h1>
+
+<video id="camera" autoplay playsinline></video>
+
+<br>
+
+<button id="start">Start Camera</button>
+
+<div id="result">
+  Hand: not detected
+</div>
+
+<script type="module" src="/app.js"></script>
+
+</body>
+</html>

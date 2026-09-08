@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+*.zip
+*.7z
+*.rar
+
+models/
+datasets/
+training/
+
+*.log
+npm-debug.log*
