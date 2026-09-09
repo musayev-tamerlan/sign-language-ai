@@ -38,6 +38,8 @@ self.onmessage = async ({ data }) => {
         runningMode: 'VIDEO', numHands: 2
       });
       self.postMessage({ type: 'ready', acceptance });
+    } else if (data.type === 'reset') {
+      frames = []; frameNumber = 0; smoothedScores = undefined;
     } else if (data.type === 'frame') {
       try {
         const result = detector.detectForVideo(data.bitmap, data.timestamp);

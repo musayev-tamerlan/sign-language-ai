@@ -45,11 +45,13 @@ function showRecognition(prediction, hands) {
   if (!prediction || hands === 0 || !Number.isFinite(prediction.confidence)) {
     wordCandidate = ''; wordCount = 0;
     status('İşarəni tanımaq mümkün olmadı', 'Əlləriniz tam görünsün və işarəni yenidən göstərin.');
+    worker?.postMessage({ type: 'reset' });
     return;
   }
   if (!valid) {
     wordCandidate = ''; wordCount = 0;
     status(`Ehtimal edilən söz: ${prediction.label}`, `Etibarlılıq ${Math.round(prediction.confidence * 100)}%. Hələ təsdiqlənməyib — işarəni sabit saxlayın.`);
+    worker?.postMessage({ type: 'reset' });
     return;
   }
   if (wordCandidate === prediction.label) wordCount++;
