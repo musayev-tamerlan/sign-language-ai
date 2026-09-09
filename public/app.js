@@ -61,6 +61,8 @@ let cancelInit, lastFrame = -1, candidate = -1, candidateSince = 0;
 function status(title, hint, error = false) {
   if ($('result').textContent !== title) $('result').textContent = title;
   if ($('hint').textContent !== hint) $('hint').textContent = hint;
+  if ($('mobile-result').textContent !== title) $('mobile-result').textContent = title;
+  if ($('mobile-hint').textContent !== hint) $('mobile-hint').textContent = hint;
   document.body.dataset.error = String(error);
 }
 function stop(title = 'Kamera dayandırılıb', hint = 'Davam etmək üçün kameranı yenidən yandırın.') {

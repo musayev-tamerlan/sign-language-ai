@@ -16,7 +16,7 @@ h1{font-size:clamp(28px,3.3vw,42px);letter-spacing:-1.5px;font-weight:650;margin
 .heading{display:flex;justify-content:space-between;align-items:center;padding:21px 24px;gap:10px}
 h2{font-size:15px;font-weight:650;margin:0}
 .heading>span{font-size:10px;color:#5c7368;background:#f0f4f1;padding:5px 8px;border-radius:5px}
-.viewfinder{position:relative;aspect-ratio:1.48;margin:0 16px;border-radius:12px;overflow:hidden;background:#102b36;color:white}
+.viewfinder{position:relative;aspect-ratio:1.48;margin:0 16px;border-radius:12px;overflow:hidden;background:#102b36;color:white;cursor:pointer}
 .viewfinder video{width:100%;height:100%;object-fit:contain;transform:scaleX(-1);display:block;opacity:0}
 .viewfinder[data-active=true] video{opacity:1}
 .placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,#1b3b45,#102b36)}
@@ -24,6 +24,7 @@ h2{font-size:15px;font-weight:650;margin:0}
 .placeholder h3{font-weight:550;font-size:23px;margin:0 0 10px}
 .placeholder p{font-size:13px;color:#b4c8ca;margin:0}
 .live{position:absolute;top:16px;left:16px;border-radius:5px;background:#102b36d9;color:#c5edcd;padding:7px 10px;font-size:11px}
+.mobile-result{display:none}
 .controls{display:flex;justify-content:center;gap:10px;padding:22px 16px 0}
 button{font:600 13px "Segoe UI",Arial,sans-serif;min-height:46px;border:1px solid #d9e3dd;border-radius:10px;padding:12px 20px;background:white;color:#37535b;cursor:pointer}
 button.primary{background:#173c3f;color:white;border-color:#173c3f}
@@ -68,6 +69,7 @@ body[data-confirmed=true] .signal{background:#e5f5e8;color:#24734e}
 @media(min-width:781px){body{overflow-x:hidden}.wrap{max-width:1280px}.intro{padding:22px 0 16px}.intro h1{font-size:34px}.app-nav{margin-bottom:14px}.workspace{gap:18px;align-items:stretch}.viewfinder{height:min(42vh,420px);aspect-ratio:auto}.controls{padding-top:14px}.privacy{margin:10px 20px 14px}.heading{padding:16px 24px}.result-content{min-height:0;padding:12px 25px 16px}.signal{width:42px;height:42px;margin-bottom:10px}.result-content h3{font-size:19px}.note{margin-bottom:12px}.tips{display:none}footer{margin-top:16px;padding:14px 0}.dictionary{margin-top:0}.app-screen#live-screen{min-height:calc(100vh - 250px)}}
 @media(min-width:781px){header.wrap{height:68px}.brand{font-size:16px}.brand img{width:34px;height:34px}.language{font-size:11px}}
 @media(max-width:780px){header.wrap{height:64px}.brand{font-size:15px}.brand img{width:34px;height:34px}.intro{padding:18px 0 14px}.intro h1{font-size:28px}.app-nav{width:100%;overflow-x:auto;gap:4px;margin-bottom:12px}.app-tab{white-space:nowrap;flex:0 0 auto;min-height:38px;padding:8px 12px}.heading{padding:16px 18px}.viewfinder{margin:0 12px}.controls{padding:14px 12px 0}.result-content{padding:14px 20px 18px}.result-content h3{font-size:20px}.note{margin:0 14px 14px}.practice-card{width:calc(100% - 28px);margin:0 14px 14px}.dictionary{padding:20px 16px}.dictionary-heading{display:block}.word-total{display:inline-block;margin-top:12px}.tabs{overflow-x:auto}.tab{white-space:nowrap;flex:0 0 auto}.word-list{gap:7px}.word-list button{font-size:12px;padding:9px 11px}.modal-actions{flex-wrap:wrap}.modal-actions .primary{order:-1;flex-basis:100%}.modal-actions button{flex:1}.project-hero{padding:28px 20px}.roadmap{grid-template-columns:1fr}.project-stats{gap:16px}}
+@media(max-width:780px){.mobile-result{display:block;position:absolute;right:10px;bottom:10px;left:10px;padding:10px 12px;border:1px solid #ffffff2b;border-radius:9px;background:#102b36dc;backdrop-filter:blur(8px);pointer-events:none}.mobile-result strong{display:block;font-size:13px;color:#fff}.mobile-result span{display:block;margin-top:3px;color:#c7d9d6;font-size:10px;line-height:1.4}.viewfinder[data-active=true] .mobile-result{background:#102b36d1}}
 .app-nav{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;padding:4px}.app-tab{min-width:0;text-align:center;border-radius:6px}.app-tab:not(:last-child){border-right:1px solid #dfe6e2}.app-tab.active{border-right-color:transparent}@media(max-width:780px){.app-nav{overflow:visible}.app-tab{white-space:normal;padding:8px 6px;font-size:11px}}
 @media(max-width:780px){.wrap{padding:0 22px}
 header{height:80px}
