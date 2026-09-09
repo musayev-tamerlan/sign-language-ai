@@ -10,12 +10,13 @@ async function loadDictionary() {
   } catch { $('word-list').textContent = 'Lüğət yüklənə bilmədi.'; }
 }
 function openSign(index) { activeSign = (index + dictionaryEntries.length) % dictionaryEntries.length; const entry = dictionaryEntries[activeSign]; $('sign-title').textContent = entry.label; $('sign-image').src = entry.image; $('sign-image').alt = `${entry.label} işarəsinin nümunəsi`; if (!$('sign-modal').open) $('sign-modal').showModal(); }
-function closeSign() { const modal = $('sign-modal'); modal.classList.add('closing'); setTimeout(() => { modal.classList.remove('closing'); modal.close(); }, 180); }
+function closeSign() { const modal = $('sign-modal'); if (modal.classList.contains('closing')) return; modal.classList.add('closing'); modal.addEventListener('animationend', () => { modal.classList.remove('closing'); modal.close(); }, { once: true }); }
 $('close-sign').addEventListener('click', closeSign);
 $('sign-modal').addEventListener('click', event => { if (event.target === event.currentTarget) closeSign(); });
 $('previous-sign').addEventListener('click', () => openSign(activeSign - 1));
 $('next-sign').addEventListener('click', () => openSign(activeSign + 1));
 $('try-sign').addEventListener('click', () => { const entry = dictionaryEntries[activeSign]; $('practice-label').textContent = entry.label; $('practice-image').src = entry.image; $('practice-image').alt = `${entry.label} işarəsinin nümunəsi`; $('practice-card').hidden = false; closeSign(); showScreen('live'); $('workspace').scrollIntoView({ behavior: 'smooth', block: 'start' }); status(`${entry.label} işarəsini sınayın`, 'Nümunədəki hərəkəti göstərin, sonra kameranı yandırın.'); });
+$('practice-card').addEventListener('click', () => openSign(activeSign));
 function showScreen(name) { document.querySelectorAll('.app-screen').forEach(screen => screen.hidden = screen.id !== `${name}-screen`); document.querySelectorAll('.app-tab').forEach(tab => tab.classList.toggle('active', tab.dataset.screen === name)); }
 if (document.querySelectorAll) document.querySelectorAll('.app-tab').forEach(tab => tab.addEventListener('click', () => showScreen(tab.dataset.screen)));
 if (document.querySelectorAll) document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => {
