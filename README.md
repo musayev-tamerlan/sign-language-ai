@@ -2,6 +2,10 @@
 
 AI-приложение для распознавания **азербайджанского жестового языка (AzSL / Azərbaycan İşarət Dili)** через веб-камеру и перевода жестов в азербайджанский текст.
 
+## Dataset attribution
+
+This project uses and includes derivatives of the **AzSLD — Azerbaijani Sign Language Dataset** by N. Alishzade and J. Hasanov (2025), DOI: [10.5281/zenodo.14222948](https://doi.org/10.5281/zenodo.14222948), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
 ## Текущий статус
 
 - Node.js + Express: готово
