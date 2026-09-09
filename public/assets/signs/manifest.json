@@ -1,402 +1,502 @@
 [
   {
     "label": "2",
-    "image": "/assets/signs/000.jpg"
+    "image": "/assets/signs/000.jpg",
+    "video": "/assets/signs/000.webm"
   },
   {
     "label": "A",
-    "image": "/assets/signs/001.jpg"
+    "image": "/assets/signs/001.jpg",
+    "video": "/assets/signs/001.webm"
   },
   {
     "label": "AD GÜNÜ",
-    "image": "/assets/signs/002.jpg"
+    "image": "/assets/signs/002.jpg",
+    "video": "/assets/signs/002.webm"
   },
   {
     "label": "AİLƏ",
-    "image": "/assets/signs/003.jpg"
+    "image": "/assets/signs/003.jpg",
+    "video": "/assets/signs/003.webm"
   },
   {
     "label": "ALMAQ",
-    "image": "/assets/signs/004.jpg"
+    "image": "/assets/signs/004.jpg",
+    "video": "/assets/signs/004.webm"
   },
   {
     "label": "ANA",
-    "image": "/assets/signs/005.jpg"
+    "image": "/assets/signs/005.jpg",
+    "video": "/assets/signs/005.webm"
   },
   {
     "label": "ATA",
-    "image": "/assets/signs/006.jpg"
+    "image": "/assets/signs/006.jpg",
+    "video": "/assets/signs/006.webm"
   },
   {
     "label": "AVTOBUS",
-    "image": "/assets/signs/007.jpg"
+    "image": "/assets/signs/007.jpg",
+    "video": "/assets/signs/007.webm"
   },
   {
     "label": "AVTOMOBİL",
-    "image": "/assets/signs/008.jpg"
+    "image": "/assets/signs/008.jpg",
+    "video": "/assets/signs/008.webm"
   },
   {
     "label": "AXŞAM",
-    "image": "/assets/signs/009.jpg"
+    "image": "/assets/signs/009.jpg",
+    "video": "/assets/signs/009.webm"
   },
   {
     "label": "AZƏRBAYCAN",
-    "image": "/assets/signs/010.jpg"
+    "image": "/assets/signs/010.jpg",
+    "video": "/assets/signs/010.webm"
   },
   {
     "label": "AĞRIMAQ",
-    "image": "/assets/signs/011.jpg"
+    "image": "/assets/signs/011.jpg",
+    "video": "/assets/signs/011.webm"
   },
   {
     "label": "BAKI",
-    "image": "/assets/signs/012.jpg"
+    "image": "/assets/signs/012.jpg",
+    "video": "/assets/signs/012.webm"
   },
   {
     "label": "BALACA",
-    "image": "/assets/signs/013.jpg"
+    "image": "/assets/signs/013.jpg",
+    "video": "/assets/signs/013.webm"
   },
   {
     "label": "BAZAR",
-    "image": "/assets/signs/014.jpg"
+    "image": "/assets/signs/014.jpg",
+    "video": "/assets/signs/014.webm"
   },
   {
     "label": "BAĞ",
-    "image": "/assets/signs/015.jpg"
+    "image": "/assets/signs/015.jpg",
+    "video": "/assets/signs/015.webm"
   },
   {
     "label": "BİLMİR",
-    "image": "/assets/signs/016.jpg"
+    "image": "/assets/signs/016.jpg",
+    "video": "/assets/signs/016.webm"
   },
   {
     "label": "BİLMƏK",
-    "image": "/assets/signs/017.jpg"
+    "image": "/assets/signs/017.jpg",
+    "video": "/assets/signs/017.webm"
   },
   {
     "label": "BİLƏR",
-    "image": "/assets/signs/018.jpg"
+    "image": "/assets/signs/018.jpg",
+    "video": "/assets/signs/018.webm"
   },
   {
     "label": "BİZ",
-    "image": "/assets/signs/019.jpg"
+    "image": "/assets/signs/019.jpg",
+    "video": "/assets/signs/019.webm"
   },
   {
     "label": "BU",
-    "image": "/assets/signs/020.jpg"
+    "image": "/assets/signs/020.jpg",
+    "video": "/assets/signs/020.webm"
   },
   {
     "label": "BU GÜN",
-    "image": "/assets/signs/021.jpg"
+    "image": "/assets/signs/021.jpg",
+    "video": "/assets/signs/021.webm"
   },
   {
     "label": "BU HƏFTƏ",
-    "image": "/assets/signs/022.jpg"
+    "image": "/assets/signs/022.jpg",
+    "video": "/assets/signs/022.webm"
   },
   {
     "label": "BURA",
-    "image": "/assets/signs/023.jpg"
+    "image": "/assets/signs/023.jpg",
+    "video": "/assets/signs/023.webm"
   },
   {
     "label": "BURDA",
-    "image": "/assets/signs/024.jpg"
+    "image": "/assets/signs/024.jpg",
+    "video": "/assets/signs/024.webm"
   },
   {
     "label": "D",
-    "image": "/assets/signs/025.jpg"
+    "image": "/assets/signs/025.jpg",
+    "video": "/assets/signs/025.webm"
   },
   {
     "label": "DONDURMA",
-    "image": "/assets/signs/026.jpg"
+    "image": "/assets/signs/026.jpg",
+    "video": "/assets/signs/026.webm"
   },
   {
     "label": "DÜNƏN",
-    "image": "/assets/signs/027.jpg"
+    "image": "/assets/signs/027.jpg",
+    "video": "/assets/signs/027.webm"
   },
   {
     "label": "EDİR",
-    "image": "/assets/signs/028.jpg"
+    "image": "/assets/signs/028.jpg",
+    "video": "/assets/signs/028.webm"
   },
   {
     "label": "ETİBARNAMƏ",
-    "image": "/assets/signs/029.jpg"
+    "image": "/assets/signs/029.jpg",
+    "video": "/assets/signs/029.webm"
   },
   {
     "label": "EV",
-    "image": "/assets/signs/030.jpg"
+    "image": "/assets/signs/030.jpg",
+    "video": "/assets/signs/030.webm"
   },
   {
     "label": "EŞİTMƏ",
-    "image": "/assets/signs/031.jpg"
+    "image": "/assets/signs/031.jpg",
+    "video": "/assets/signs/031.webm"
   },
   {
     "label": "EŞİTMƏ MƏHDÜDİYYƏTLİ",
-    "image": "/assets/signs/032.jpg"
+    "image": "/assets/signs/032.jpg",
+    "video": "/assets/signs/032.webm"
   },
   {
     "label": "FUTBOL",
-    "image": "/assets/signs/033.jpg"
+    "image": "/assets/signs/033.jpg",
+    "video": "/assets/signs/033.webm"
   },
   {
     "label": "GECİKMƏK",
-    "image": "/assets/signs/034.jpg"
+    "image": "/assets/signs/034.jpg",
+    "video": "/assets/signs/034.webm"
   },
   {
     "label": "GETMƏK",
-    "image": "/assets/signs/035.jpg"
+    "image": "/assets/signs/035.jpg",
+    "video": "/assets/signs/035.webm"
   },
   {
     "label": "GÖRMƏK",
-    "image": "/assets/signs/036.jpg"
+    "image": "/assets/signs/036.jpg",
+    "video": "/assets/signs/036.webm"
   },
   {
     "label": "GƏLMƏK",
-    "image": "/assets/signs/037.jpg"
+    "image": "/assets/signs/037.jpg",
+    "video": "/assets/signs/037.webm"
   },
   {
     "label": "HAMI",
-    "image": "/assets/signs/038.jpg"
+    "image": "/assets/signs/038.jpg",
+    "video": "/assets/signs/038.webm"
   },
   {
     "label": "HANSI",
-    "image": "/assets/signs/039.jpg"
+    "image": "/assets/signs/039.jpg",
+    "video": "/assets/signs/039.webm"
   },
   {
     "label": "HARDA",
-    "image": "/assets/signs/040.jpg"
+    "image": "/assets/signs/040.jpg",
+    "video": "/assets/signs/040.webm"
   },
   {
     "label": "HƏR GÜN",
-    "image": "/assets/signs/041.jpg"
+    "image": "/assets/signs/041.jpg",
+    "video": "/assets/signs/041.webm"
   },
   {
     "label": "İ",
-    "image": "/assets/signs/042.jpg"
+    "image": "/assets/signs/042.jpg",
+    "video": "/assets/signs/042.webm"
   },
   {
     "label": "İNDİ",
-    "image": "/assets/signs/043.jpg"
+    "image": "/assets/signs/043.jpg",
+    "video": "/assets/signs/043.webm"
   },
   {
     "label": "İSTƏMƏK",
-    "image": "/assets/signs/044.jpg"
+    "image": "/assets/signs/044.jpg",
+    "video": "/assets/signs/044.webm"
   },
   {
     "label": "İSTƏYİRƏM",
-    "image": "/assets/signs/045.jpg"
+    "image": "/assets/signs/045.jpg",
+    "video": "/assets/signs/045.webm"
   },
   {
     "label": "İŞ",
-    "image": "/assets/signs/046.jpg"
+    "image": "/assets/signs/046.jpg",
+    "video": "/assets/signs/046.webm"
   },
   {
     "label": "İŞARƏ",
-    "image": "/assets/signs/047.jpg"
+    "image": "/assets/signs/047.jpg",
+    "video": "/assets/signs/047.webm"
   },
   {
     "label": "İŞLƏMƏK",
-    "image": "/assets/signs/048.jpg"
+    "image": "/assets/signs/048.jpg",
+    "video": "/assets/signs/048.webm"
   },
   {
     "label": "LAZIM",
-    "image": "/assets/signs/049.jpg"
+    "image": "/assets/signs/049.jpg",
+    "video": "/assets/signs/049.webm"
   },
   {
     "label": "MÜRACİƏT",
-    "image": "/assets/signs/050.jpg"
+    "image": "/assets/signs/050.jpg",
+    "video": "/assets/signs/050.webm"
   },
   {
     "label": "MƏKTƏB",
-    "image": "/assets/signs/051.jpg"
+    "image": "/assets/signs/051.jpg",
+    "video": "/assets/signs/051.webm"
   },
   {
     "label": "MƏN",
-    "image": "/assets/signs/052.jpg"
+    "image": "/assets/signs/052.jpg",
+    "video": "/assets/signs/052.webm"
   },
   {
     "label": "MƏNİM",
-    "image": "/assets/signs/053.jpg"
+    "image": "/assets/signs/053.jpg",
+    "video": "/assets/signs/053.webm"
   },
   {
     "label": "MƏNƏ",
-    "image": "/assets/signs/054.jpg"
+    "image": "/assets/signs/054.jpg",
+    "video": "/assets/signs/054.webm"
   },
   {
     "label": "NECƏ",
-    "image": "/assets/signs/055.jpg"
+    "image": "/assets/signs/055.jpg",
+    "video": "/assets/signs/055.webm"
   },
   {
     "label": "NƏDİR",
-    "image": "/assets/signs/056.jpg"
+    "image": "/assets/signs/056.jpg",
+    "video": "/assets/signs/056.webm"
   },
   {
     "label": "O",
-    "image": "/assets/signs/057.jpg"
+    "image": "/assets/signs/057.jpg",
+    "video": "/assets/signs/057.webm"
   },
   {
     "label": "OLAR",
-    "image": "/assets/signs/058.jpg"
+    "image": "/assets/signs/058.jpg",
+    "video": "/assets/signs/058.webm"
   },
   {
     "label": "OLMAQ",
-    "image": "/assets/signs/059.jpg"
+    "image": "/assets/signs/059.jpg",
+    "video": "/assets/signs/059.webm"
   },
   {
     "label": "ONUN",
-    "image": "/assets/signs/060.jpg"
+    "image": "/assets/signs/060.jpg",
+    "video": "/assets/signs/060.webm"
   },
   {
     "label": "ORA",
-    "image": "/assets/signs/061.jpg"
+    "image": "/assets/signs/061.jpg",
+    "video": "/assets/signs/061.webm"
   },
   {
     "label": "ORDA",
-    "image": "/assets/signs/062.jpg"
+    "image": "/assets/signs/062.jpg",
+    "video": "/assets/signs/062.webm"
   },
   {
     "label": "OXUMAQ",
-    "image": "/assets/signs/063.jpg"
+    "image": "/assets/signs/063.jpg",
+    "video": "/assets/signs/063.webm"
   },
   {
     "label": "OĞUL",
-    "image": "/assets/signs/064.jpg"
+    "image": "/assets/signs/064.jpg",
+    "video": "/assets/signs/064.webm"
   },
   {
     "label": "PENSİYA",
-    "image": "/assets/signs/065.jpg"
+    "image": "/assets/signs/065.jpg",
+    "video": "/assets/signs/065.webm"
   },
   {
     "label": "QAPI",
-    "image": "/assets/signs/066.jpg"
+    "image": "/assets/signs/066.jpg",
+    "video": "/assets/signs/066.webm"
   },
   {
     "label": "QARABAQ",
-    "image": "/assets/signs/067.jpg"
+    "image": "/assets/signs/067.jpg",
+    "video": "/assets/signs/067.webm"
   },
   {
     "label": "QATAR",
-    "image": "/assets/signs/068.jpg"
+    "image": "/assets/signs/068.jpg",
+    "video": "/assets/signs/068.webm"
   },
   {
     "label": "RƏSİM",
-    "image": "/assets/signs/069.jpg"
+    "image": "/assets/signs/069.jpg",
+    "video": "/assets/signs/069.webm"
   },
   {
     "label": "SABAH",
-    "image": "/assets/signs/070.jpg"
+    "image": "/assets/signs/070.jpg",
+    "video": "/assets/signs/070.webm"
   },
   {
     "label": "SALAM",
-    "image": "/assets/signs/071.jpg"
+    "image": "/assets/signs/071.jpg",
+    "video": "/assets/signs/071.webm"
   },
   {
     "label": "SATICI",
-    "image": "/assets/signs/072.jpg"
+    "image": "/assets/signs/072.jpg",
+    "video": "/assets/signs/072.webm"
   },
   {
     "label": "SAĞLAM",
-    "image": "/assets/signs/073.jpg"
+    "image": "/assets/signs/073.jpg",
+    "video": "/assets/signs/073.webm"
   },
   {
     "label": "SİZ",
-    "image": "/assets/signs/074.jpg"
+    "image": "/assets/signs/074.jpg",
+    "video": "/assets/signs/074.webm"
   },
   {
     "label": "SONRA",
-    "image": "/assets/signs/075.jpg"
+    "image": "/assets/signs/075.jpg",
+    "video": "/assets/signs/075.webm"
   },
   {
     "label": "SU",
-    "image": "/assets/signs/076.jpg"
+    "image": "/assets/signs/076.jpg",
+    "video": "/assets/signs/076.webm"
   },
   {
     "label": "SƏN",
-    "image": "/assets/signs/077.jpg"
+    "image": "/assets/signs/077.jpg",
+    "video": "/assets/signs/077.webm"
   },
   {
     "label": "SƏNƏD",
-    "image": "/assets/signs/078.jpg"
+    "image": "/assets/signs/078.jpg",
+    "video": "/assets/signs/078.webm"
   },
   {
     "label": "SƏRGİ",
-    "image": "/assets/signs/079.jpg"
+    "image": "/assets/signs/079.jpg",
+    "video": "/assets/signs/079.webm"
   },
   {
     "label": "TELEFON",
-    "image": "/assets/signs/080.jpg"
+    "image": "/assets/signs/080.jpg",
+    "video": "/assets/signs/080.webm"
   },
   {
     "label": "UĞUR",
-    "image": "/assets/signs/081.jpg"
+    "image": "/assets/signs/081.jpg",
+    "video": "/assets/signs/081.webm"
   },
   {
     "label": "UŞAQ",
-    "image": "/assets/signs/082.jpg"
+    "image": "/assets/signs/082.jpg",
+    "video": "/assets/signs/082.webm"
   },
   {
     "label": "VAR",
-    "image": "/assets/signs/083.jpg"
+    "image": "/assets/signs/083.jpg",
+    "video": "/assets/signs/083.webm"
   },
   {
     "label": "VAXT",
-    "image": "/assets/signs/084.jpg"
+    "image": "/assets/signs/084.jpg",
+    "video": "/assets/signs/084.webm"
   },
   {
     "label": "VİZA",
-    "image": "/assets/signs/085.jpg"
+    "image": "/assets/signs/085.jpg",
+    "video": "/assets/signs/085.webm"
   },
   {
     "label": "XATIRLADIM",
-    "image": "/assets/signs/086.jpg"
+    "image": "/assets/signs/086.jpg",
+    "video": "/assets/signs/086.webm"
   },
   {
     "label": "XEYİR",
-    "image": "/assets/signs/087.jpg"
+    "image": "/assets/signs/087.jpg",
+    "video": "/assets/signs/087.webm"
   },
   {
     "label": "YAXŞI",
-    "image": "/assets/signs/088.jpg"
+    "image": "/assets/signs/088.jpg",
+    "video": "/assets/signs/088.webm"
   },
   {
     "label": "YAŞ",
-    "image": "/assets/signs/089.jpg"
+    "image": "/assets/signs/089.jpg",
+    "video": "/assets/signs/089.webm"
   },
   {
     "label": "YAŞAMAQ",
-    "image": "/assets/signs/090.jpg"
+    "image": "/assets/signs/090.jpg",
+    "video": "/assets/signs/090.webm"
   },
   {
     "label": "YEMƏK",
-    "image": "/assets/signs/091.jpg"
+    "image": "/assets/signs/091.jpg",
+    "video": "/assets/signs/091.webm"
   },
   {
     "label": "YENİ",
-    "image": "/assets/signs/092.jpg"
+    "image": "/assets/signs/092.jpg",
+    "video": "/assets/signs/092.webm"
   },
   {
     "label": "YOX",
-    "image": "/assets/signs/093.jpg"
+    "image": "/assets/signs/093.jpg",
+    "video": "/assets/signs/093.webm"
   },
   {
     "label": "ÇOX",
-    "image": "/assets/signs/094.jpg"
+    "image": "/assets/signs/094.jpg",
+    "video": "/assets/signs/094.webm"
   },
   {
     "label": "ÇƏKMƏK",
-    "image": "/assets/signs/095.jpg"
+    "image": "/assets/signs/095.jpg",
+    "video": "/assets/signs/095.webm"
   },
   {
     "label": "ÜNVANLİ",
-    "image": "/assets/signs/096.jpg"
+    "image": "/assets/signs/096.jpg",
+    "video": "/assets/signs/096.webm"
   },
   {
     "label": "ÜÇÜN",
-    "image": "/assets/signs/097.jpg"
+    "image": "/assets/signs/097.jpg",
+    "video": "/assets/signs/097.webm"
   },
   {
     "label": "ƏLİL",
-    "image": "/assets/signs/098.jpg"
+    "image": "/assets/signs/098.jpg",
+    "video": "/assets/signs/098.webm"
   },
   {
     "label": "ƏRZAQ",
-    "image": "/assets/signs/099.jpg"
+    "image": "/assets/signs/099.jpg",
+    "video": "/assets/signs/099.webm"
   }
 ]

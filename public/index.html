@@ -74,6 +74,7 @@
 <div><span>Ehtimal</span><strong id="confidence-value">0%</strong></div>
 <div class="confidence-track"><span id="confidence-fill"></span></div>
 </div>
+<div id="feedback" class="feedback" hidden><span>Nəticə düzgündür?</span><button data-feedback="Düzgün">Bəli</button><button data-feedback="Səhv">Xeyr</button></div>
 </div>
 <div class="note">
 <strong>100 söz üçün canlı tanınma</strong>
@@ -127,10 +128,10 @@
 </div>
 </section>
 </section>
-<section id="project-screen" class="app-screen project-screen" hidden><div class="project-hero"><p class="eyebrow">SIGN LANGUAGE AI</p><h2>Azərbaycan işarət dilini əlçatan etmək</h2><p>Bu versiya 100 ayrı sözü kamerada tanımaq üçün hazırlanıb. Məqsədimiz etibarlı sözlərdən gündəlik cümlələrə, video və səsli ünsiyyətə keçməkdir.</p><div class="project-stats"><span><b>100</b> söz</span><span><b>7,248</b> təlim videosu</span><span><b>3</b> növbəti istiqamət</span></div></div><div class="roadmap"><article><b>01</b><h3>Sözlər</h3><p>Real vaxtda söz tanınması və nümunə lüğət.</p></article><article><b>02</b><h3>Cümlələr</h3><p>Ardıcıl jestlərdən məna və cümlə qurmaq.</p></article><article><b>03</b><h3>Ünsiyyət</h3><p>Video, mətn və səs arasında əlçatan tərcümə.</p></article></div></section>
+<section id="project-screen" class="app-screen project-screen" hidden><div class="project-hero"><p class="eyebrow">SIGN LANGUAGE AI</p><h2>Azərbaycan işarət dilini əlçatan etmək</h2><p>Bu versiya 100 ayrı sözü kamerada tanımaq üçün hazırlanıb. Məqsədimiz etibarlı sözlərdən gündəlik cümlələrə, video və səsli ünsiyyətə keçməkdir.</p><div class="project-stats"><span><b>100</b> söz</span><span><b>7,248</b> təlim videosu</span><span><b>3</b> növbəti istiqamət</span></div></div><div class="roadmap"><article><b>01</b><h3>Sözlər</h3><p>Real vaxtda söz tanınması və nümunə lüğət.</p></article><article><b>02</b><h3>Cümlələr</h3><p>Ardıcıl jestlərdən məna və cümlə qurmaq.</p></article><article><b>03</b><h3>Ünsiyyət</h3><p>Video, mətn və səs arasında əlçatan tərcümə.</p></article></div><div class="support-cta"><h3>Layihəyə dəstək olun</h3><p>İşarət dili mütəxəssisisiniz, icma üzvüsünüz və ya tərəfdaş olmaq istəyirsiniz? Sözlərin yoxlanması və yeni video nümunələri üçün bizə yazın.</p><a class="primary support-link" href="https://github.com/musayev-tamerlan/sign-language-ai/issues/new" target="_blank" rel="noopener">Dəstək təklifi göndərin</a><small>MVP məhdudiyyətləri: hazırda yalnız 100 ayrı söz tanınır. Cümlə tərcüməsi, audio və videozəng tərcüməsi hələ mövcud deyil.</small></div></section>
 <dialog id="sign-modal" class="sign-modal" aria-labelledby="sign-title">
 <button id="close-sign" class="close-sign" aria-label="Pəncərəni bağla"><span></span><span></span></button><p class="eyebrow">JEST NÜMUNƏSİ</p><h2 id="sign-title"></h2>
-<img id="sign-image" alt="" width="480" height="360"><p>Bu, modelin təlimində istifadə olunan videodan nümunə kadrdır. İşarəni tam video hərəkəti ilə göstərin.</p>
+<video id="sign-video" controls playsinline muted loop width="480" height="360"></video><img id="sign-image" alt="" width="480" height="360" hidden><p>Bu, modelin təlimində istifadə olunan qısa video nümunəsidir. İşarəni tam hərəkət ilə göstərin.</p>
 <div class="modal-actions"><button id="previous-sign">← Əvvəlki</button><button id="try-sign" class="primary">Bu jesti sına</button><button id="next-sign">Növbəti →</button></div>
 </dialog>
 <noscript>

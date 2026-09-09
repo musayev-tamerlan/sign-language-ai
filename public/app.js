@@ -4,12 +4,12 @@ let dictionaryEntries = [], activeSign = -1, selectedSign = -1;
 async function loadDictionary() {
   try {
     const [metadata, references] = await Promise.all([fetch('/assets/azsl-gru-v3.labels.json').then(response => response.json()), fetch('/assets/signs/manifest.json').then(response => response.json())]);
-    dictionaryEntries = metadata.labels.map(label => ({ label, image: references.find(reference => reference.label === label)?.image }));
+    dictionaryEntries = metadata.labels.map(label => ({ label, ...references.find(reference => reference.label === label) }));
     $('word-total').textContent = `${metadata.labels.length} söz`;
     for (const [index, entry] of dictionaryEntries.entries()) { const item = document.createElement('button'); item.type = 'button'; item.textContent = entry.label; item.addEventListener('click', () => openSign(index)); $('word-list').append(item); }
   } catch { $('word-list').textContent = 'Lüğət yüklənə bilmədi.'; }
 }
-function openSign(index) { activeSign = (index + dictionaryEntries.length) % dictionaryEntries.length; const entry = dictionaryEntries[activeSign]; $('sign-title').textContent = entry.label; $('sign-image').src = entry.image; $('sign-image').alt = `${entry.label} işarəsinin nümunəsi`; if (!$('sign-modal').open) $('sign-modal').showModal(); }
+function openSign(index) { activeSign = (index + dictionaryEntries.length) % dictionaryEntries.length; const entry = dictionaryEntries[activeSign]; $('sign-title').textContent = entry.label; $('sign-image').src = entry.image; $('sign-image').alt = `${entry.label} işarəsinin nümunəsi`; $('sign-video').src = entry.video || ''; $('sign-video').hidden = !entry.video; $('sign-image').hidden = Boolean(entry.video); if (!$('sign-modal').open) $('sign-modal').showModal(); }
 function closeSign() { const modal = $('sign-modal'); if (modal.classList.contains('closing')) return; modal.classList.add('closing'); modal.addEventListener('animationend', () => { modal.classList.remove('closing'); modal.close(); }, { once: true }); }
 $('close-sign').addEventListener('click', closeSign);
 $('sign-modal').addEventListener('click', event => { if (event.target === event.currentTarget) closeSign(); });
@@ -56,7 +56,7 @@ function showRecognition(prediction, hands) {
   }
   if (wordCandidate === prediction.label) wordCount++;
   else { wordCandidate = prediction.label; wordCount = 1; }
-  if (wordCount >= 3) { setConfidence(prediction.confidence, true); status(prediction.label, 'Tanınan söz'); }
+  if (wordCount >= 3) { setConfidence(prediction.confidence, true); status(prediction.label, 'Tanınan söz'); $('feedback').hidden = false; $('feedback').dataset.word = prediction.label; }
   else status(`Ehtimal edilən söz: ${prediction.label}`, `Etibarlılıq ${Math.round(prediction.confidence * 100)}%. Təsdiq üçün sabit saxlayın (${wordCount}/3).`);
 }
 let cancelInit, lastFrame = -1, candidate = -1, candidateSince = 0;
@@ -179,6 +179,7 @@ $('start').addEventListener('click', async () => {
   }
 });
 $('stop').addEventListener('click', () => stop());
+if (document.querySelectorAll) document.querySelectorAll('[data-feedback]').forEach(button => button.addEventListener('click', () => { const word = $('feedback').dataset.word || 'naməlum'; const answer = button.dataset.feedback; window.open(`https://github.com/musayev-tamerlan/sign-language-ai/issues/new?title=${encodeURIComponent(`Feedback: ${word} — ${answer}`)}&body=${encodeURIComponent(`Taninan söz: ${word}\nNəticə: ${answer}`)}`, '_blank', 'noopener'); }));
 $('viewfinder').addEventListener('click', () => { if (!running && !$('start').disabled) $('start').click(); });
 $('viewfinder').addEventListener('keydown', event => { if ((event.key === 'Enter' || event.key === ' ') && !running && !$('start').disabled) { event.preventDefault(); $('start').click(); } });
 document.addEventListener('visibilitychange', () => {
