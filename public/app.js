@@ -1,6 +1,6 @@
 const $ = (id) => document.getElementById(id);
 const video = $('camera');
-let dictionaryEntries = [], activeSign = -1;
+let dictionaryEntries = [], activeSign = -1, selectedSign = -1;
 async function loadDictionary() {
   try {
     const [metadata, references] = await Promise.all([fetch('/assets/azsl-gru-v3.labels.json').then(response => response.json()), fetch('/assets/signs/manifest.json').then(response => response.json())]);
@@ -15,8 +15,8 @@ $('close-sign').addEventListener('click', closeSign);
 $('sign-modal').addEventListener('click', event => { if (event.target === event.currentTarget) closeSign(); });
 $('previous-sign').addEventListener('click', () => openSign(activeSign - 1));
 $('next-sign').addEventListener('click', () => openSign(activeSign + 1));
-$('try-sign').addEventListener('click', () => { const entry = dictionaryEntries[activeSign]; $('practice-label').textContent = entry.label; $('practice-copy').textContent = 'Nümunəyə baxın, sonra jesti kamerada təkrarlayın.'; $('practice-image').src = entry.image; $('practice-image').alt = `${entry.label} işarəsinin nümunəsi`; $('practice-image').hidden = false; $('practice-card').dataset.empty = 'false'; closeSign(); showScreen('live'); $('workspace').scrollIntoView({ behavior: 'smooth', block: 'start' }); status(`${entry.label} işarəsini sınayın`, 'Nümunədəki hərəkəti göstərin, sonra kameranı yandırın.'); });
-$('practice-card').addEventListener('click', () => { if (activeSign < 0) showScreen('dictionary'); else openSign(activeSign); });
+$('try-sign').addEventListener('click', () => { selectedSign = activeSign; const entry = dictionaryEntries[selectedSign]; $('practice-label').textContent = entry.label; $('practice-copy').textContent = 'Nümunəyə baxın, sonra jesti kamerada təkrarlayın.'; $('practice-image').src = entry.image; $('practice-image').alt = `${entry.label} işarəsinin nümunəsi`; $('practice-image').hidden = false; $('practice-card').dataset.empty = 'false'; closeSign(); showScreen('live'); $('workspace').scrollIntoView({ behavior: 'smooth', block: 'start' }); status(`${entry.label} işarəsini sınayın`, 'Nümunədəki hərəkəti göstərin, sonra kameranı yandırın.'); });
+$('practice-card').addEventListener('click', () => { if (selectedSign < 0) showScreen('dictionary'); else openSign(selectedSign); });
 function showScreen(name) { document.querySelectorAll('.app-screen').forEach(screen => screen.hidden = screen.id !== `${name}-screen`); document.querySelectorAll('.app-tab').forEach(tab => tab.classList.toggle('active', tab.dataset.screen === name)); }
 if (document.querySelectorAll) document.querySelectorAll('.app-tab').forEach(tab => tab.addEventListener('click', () => showScreen(tab.dataset.screen)));
 if (document.querySelectorAll) document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => {
