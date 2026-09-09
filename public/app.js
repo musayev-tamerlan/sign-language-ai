@@ -70,6 +70,7 @@ function status(title, hint, error = false) {
 function stop(title = 'Kamera dayandırılıb', hint = 'Davam etmək üçün kameranı yenidən yandırın.') {
   session++;
   running = false;
+  document.body.dataset.loading = 'false';
   clearTimeout(timer); clearTimeout(watchdog);
   cancelInit?.(); cancelInit = undefined;
   worker?.terminate(); worker = undefined;
@@ -124,6 +125,7 @@ $('start').addEventListener('click', async () => {
     if (id !== session) return;
     $('viewfinder').dataset.active = 'true'; $('placeholder').hidden = true; $('view-label').hidden = false;
     status('Əl aşkarlama hazırlanır', 'İlk açılışda bu bir qədər vaxt apara bilər.');
+    document.body.dataset.loading = 'true';
     worker = new Worker('/detector-worker.js');
     const activeWorker = worker;
     await new Promise((resolve, reject) => {
@@ -142,6 +144,7 @@ $('start').addEventListener('click', async () => {
     });
     if (id !== session) return;
     cancelInit = undefined;
+    document.body.dataset.loading = 'false';
     worker.onerror = () => { if (id === session) fail('Emal xətası', 'Kameranı yenidən yandırın.'); };
     worker.onmessage = ({ data }) => {
       if (id !== session) return;

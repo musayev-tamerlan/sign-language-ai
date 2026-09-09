@@ -37,6 +37,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #247e60;outline-offset:4p
 .signal{display:grid;place-content:center;width:48px;height:48px;background:#edf6f0;border-radius:50%;color:#537e65;font-size:35px;margin:0 auto 18px}
 .result-content h3{font-size:21px;font-weight:600;letter-spacing:-.5px;margin:0 0 10px}
 .result-content p{font-size:13px;line-height:1.7;color:#65777d;margin:0}
+.loading-progress{display:none;height:5px;margin:18px auto 0;max-width:210px;overflow:hidden;border-radius:999px;background:#e6eeea}.loading-progress span{display:block;width:42%;height:100%;border-radius:inherit;background:#3f8067;animation:loading-slide 1.1s ease-in-out infinite}body[data-loading=true] .loading-progress{display:block}body[data-loading=true] .signal{animation:loading-spin 1s linear infinite}@keyframes loading-slide{from{transform:translateX(-120%)}to{transform:translateX(340%)}}@keyframes loading-spin{to{transform:rotate(360deg)}}
 .confidence{margin:18px auto 0;max-width:240px;text-align:left}
 .confidence div:first-child{display:flex;justify-content:space-between;font-size:11px;color:#5d746a}
 .confidence strong{color:#173c3f;font-size:12px}
