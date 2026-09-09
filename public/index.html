@@ -1,55 +1,143 @@
-﻿<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="az">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Sign Language AI</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    video {
-      width: 100%;
-      max-width: 720px;
-      border-radius: 15px;
-      background: #111;
-      transform: scaleX(-1);
-    }
-
-    button {
-      padding: 12px 24px;
-      margin: 15px;
-      cursor: pointer;
-    }
-
-    #result {
-      font-size: 24px;
-      margin: 20px;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102b36">
+<meta name="description" content="Azərbaycan işarət dili üçün əl hərəkətlərinin aşkarlanması. Video cihazınızda emal olunur.">
+<title>Sign Language AI — Azərbaycan işarət dili</title>
+<link rel="icon" href="/icon.svg">
+<link rel="stylesheet" href="/styles.css">
+<script type="module" src="/app.js">
+</script>
 </head>
-
 <body>
-
-<h1>🤟 Sign Language AI</h1>
-
-<video id="camera" autoplay playsinline></video>
-
-<br>
-
-<button id="start">Start Camera</button>
-
-<div id="result">
-  Hand: not detected
+<a class="skip" href="#workspace">Əsas məzmuna keç</a>
+<header class="wrap">
+<a class="brand" href="/">
+<img src="/icon.svg" width="40" height="40" alt="">Sign Language <b>AI</b>
+</a>
+<span class="language">AZ <span>Azərbaycan dili</span>
+</span>
+</header>
+<main class="wrap">
+<section class="intro">
+<div>
+<p class="eyebrow">AZƏRBAYCAN İŞARƏT DİLİ</p>
+<h1>Ünsiyyətə bir addım yaxın.</h1>
+<p class="lead">Əllərinizi kameraya göstərin. Daha əlçatan ünsiyyətə doğru.</p>
 </div>
-
-<script type="module" src="/app.js"></script>
-
+<span class="badge">● &nbsp; Sınaq versiyası</span>
+</section>
+<nav class="app-nav" aria-label="Əsas bölmələr"><button class="app-tab active" data-screen="live">Canlı tanınma</button><button class="app-tab" data-screen="dictionary">Sözlük və nümunələr</button><button class="app-tab" data-screen="project">Layihə haqqında</button></nav>
+<section id="live-screen" class="app-screen">
+<div id="workspace" class="workspace">
+<section class="card">
+<div class="heading">
+<h2>Kamera</h2>
+<span id="camera-state">Söndürülüb</span>
+</div>
+<div id="viewfinder" class="viewfinder">
+<video id="camera" autoplay playsinline muted aria-label="Kameranın canlı görüntüsü">
+</video>
+<div id="placeholder" class="placeholder">
+<svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+<rect x="5" y="12" width="27" height="24" rx="7"/>
+<path d="m32 20 11-6v20l-11-6"/>
+</svg>
+<h3>Hazırsınız?</h3>
+<p>Başlamaq üçün kameranı yandırın.</p>
+</div>
+<span id="view-label" class="live" hidden>● &nbsp; Canlı görüntü</span>
+</div>
+<div class="controls">
+<button id="start" class="primary">
+<span id="start-label">Kameranı yandır</span>
+</button>
+<button id="stop" disabled>Dayandır</button>
+</div>
+<p class="privacy">◇ &nbsp; Video cihazınızda emal olunur və serverə göndərilmir.</p>
+</section>
+<aside>
+<section class="card">
+<div class="heading">
+<h2>Aşkarlama vəziyyəti</h2>
+<span>CANLI</span>
+</div>
+<div class="result-content">
+<span class="signal" aria-hidden="true">◎</span>
+<h3 id="result" role="status" aria-live="polite" aria-atomic="true">Kamera gözlənilir</h3>
+<p id="hint">Kameranı yandırdıqdan sonra əllərinizi çərçivəyə daxil edin.</p>
+<div id="confidence" class="confidence" hidden aria-label="Model etibarlılığı">
+<div><span>Ehtimal</span><strong id="confidence-value">0%</strong></div>
+<div class="confidence-track"><span id="confidence-fill"></span></div>
+</div>
+</div>
+<div class="note">
+<strong>100 söz üçün canlı tanınma</strong>
+<p>Əvvəl ehtimal edilən söz və faiz göstərilir. Üç sabit nəticədən sonra söz təsdiqlənir.</p>
+</div>
+</section>
+<section class="tips">
+<h2>Daha yaxşı nəticə üçün</h2>
+<ol>
+<li>
+<div>
+<strong>İşıqlı yerdə olun</strong>
+<p>İşıq üzünüzə və əllərinizə düşsün.</p>
+</div>
+</li>
+<li>
+<div>
+<strong>Əllərinizi aydın göstərin</strong>
+<p>Hər iki əliniz tam çərçivədə qalsın.</p>
+</div>
+</li>
+<li>
+<div>
+<strong>Sadə fon seçin</strong>
+<p>Kameranı sabit saxlayın, rahat hərəkət edin.</p>
+</div>
+</li>
+</ol>
+</section>
+</aside>
+</div>
+</section>
+<section id="dictionary-screen" class="app-screen" hidden><section class="dictionary" aria-labelledby="dictionary-title">
+<div class="dictionary-heading">
+<div><p class="eyebrow">AÇIQ LÜĞƏT</p><h2 id="dictionary-title">Modelin bu gün bildiyi sözlər</h2><p>Hazırda model yalnız ayrı-ayrı sözləri tanıyır. Cümlə tərcüməsi növbəti mərhələdir.</p></div>
+<span id="word-total" class="word-total">100 söz</span>
+</div>
+<div class="tabs" role="tablist" aria-label="Lüğət bölmələri">
+<button class="tab active" role="tab" aria-selected="true" aria-controls="words-panel" data-tab="words">Mövcud sözlər</button>
+<button class="tab" role="tab" aria-selected="false" aria-controls="examples-panel" data-tab="examples">İfadə nümunələri</button>
+<button class="tab" role="tab" aria-selected="false" aria-controls="help-panel" data-tab="help">Layihəyə dəstək</button>
+</div>
+<div id="words-panel" class="tab-panel" role="tabpanel"><p class="dictionary-note">Sözün üzərinə toxunun və kamerada həmin işarəni ayrıca göstərin.</p><div id="word-list" class="word-list" aria-live="polite"></div></div>
+<div id="examples-panel" class="tab-panel" role="tabpanel" hidden>
+<p class="dictionary-note">Bunlar hazırkı sözlərdən qurulan ünsiyyət nümunələridir. Model hələ cümləni bütöv şəkildə çevirmir.</p>
+<div class="examples"><article><strong>SALAM • SİZ • NECƏ?</strong><span>“Salam, necəsiniz?”</span></article><article><strong>MƏN • BAKI • YAŞAMAQ</strong><span>“Mən Bakıda yaşayıram.”</span></article><article><strong>BU GÜN • BAZAR • GETMƏK</strong><span>“Bu gün bazara gedirəm.”</span></article></div>
+</div>
+<div id="help-panel" class="tab-panel" role="tabpanel" hidden>
+<div class="support-grid"><div><strong>İşarət dili mütəxəssisləri</strong><p>İşarələrin düzgünlüyünü və etiketləri yoxlamağa kömək edin.</p></div><div><strong>İcma üzvləri</strong><p>Müxtəlif yaş, bölgə və icra tərzlərində nümunələr paylaşın.</p></div><div><strong>İnvestorlar və tərəfdaşlar</strong><p>100 sözdən cümlə, video və səs üzrə əlçatan tərcüməyə keçidi dəstəkləyin.</p></div></div>
+</div>
+</section>
+</section>
+<section id="project-screen" class="app-screen project-screen" hidden><div class="project-hero"><p class="eyebrow">SIGN LANGUAGE AI</p><h2>Azərbaycan işarət dilini əlçatan etmək</h2><p>Bu versiya 100 ayrı sözü kamerada tanımaq üçün hazırlanıb. Məqsədimiz etibarlı sözlərdən gündəlik cümlələrə, video və səsli ünsiyyətə keçməkdir.</p><div class="project-stats"><span><b>100</b> söz</span><span><b>7,248</b> təlim videosu</span><span><b>3</b> növbəti istiqamət</span></div></div><div class="roadmap"><article><b>01</b><h3>Sözlər</h3><p>Real vaxtda söz tanınması və nümunə lüğət.</p></article><article><b>02</b><h3>Cümlələr</h3><p>Ardıcıl jestlərdən məna və cümlə qurmaq.</p></article><article><b>03</b><h3>Ünsiyyət</h3><p>Video, mətn və səs arasında əlçatan tərcümə.</p></article></div></section>
+<dialog id="sign-modal" class="sign-modal" aria-labelledby="sign-title">
+<button id="close-sign" class="close-sign" aria-label="Pəncərəni bağla"><span></span><span></span></button><p class="eyebrow">JEST NÜMUNƏSİ</p><h2 id="sign-title"></h2>
+<img id="sign-image" alt="" width="480" height="360"><p>Bu, modelin təlimində istifadə olunan videodan nümunə kadrdır. İşarəni tam video hərəkəti ilə göstərin.</p>
+<div class="modal-actions"><button id="previous-sign">← Əvvəlki</button><button id="try-sign" class="primary">Bu jesti sına</button><button id="next-sign">Növbəti →</button></div>
+</dialog>
+<noscript>
+<p>JavaScript-i aktiv edin.</p>
+</noscript>
+<footer>
+<b>Sign Language AI</b>
+<span>Azərbaycan işarət dili üçün hazırlanır.</span>
+<span>Əlçatan ünsiyyət üçün</span>
+</footer>
+</main>
 </body>
 </html>

@@ -1,1 +1,19 @@
-{"name":"sign-language-ai","version":"1.0.0","private":true,"scripts":{"start":"node server.js","dev":"node --watch server.js"},"dependencies":{"@mediapipe/tasks-vision":"^1.0.1","express":"^5.1.0"}}
+{
+  "name": "sign-language-ai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "build": "node scripts/build.js",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.0.1",
+    "express": "5.2.1",
+    "onnxruntime-web": "1.23.2"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
