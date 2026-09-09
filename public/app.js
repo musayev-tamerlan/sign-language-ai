@@ -172,6 +172,8 @@ $('start').addEventListener('click', async () => {
   }
 });
 $('stop').addEventListener('click', () => stop());
+$('viewfinder').addEventListener('click', () => { if (!running && !$('start').disabled) $('start').click(); });
+$('viewfinder').addEventListener('keydown', event => { if ((event.key === 'Enter' || event.key === ' ') && !running && !$('start').disabled) { event.preventDefault(); $('start').click(); } });
 document.addEventListener('visibilitychange', () => {
   if (document.hidden && $('stop').disabled === false) stop('Kamera dayandırılıb', 'Səhifədən ayrıldığınız üçün kamera söndürüldü. Davam etmək üçün yenidən yandırın.');
 });
