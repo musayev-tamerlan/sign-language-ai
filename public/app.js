@@ -15,7 +15,7 @@ $('close-sign').addEventListener('click', closeSign);
 $('sign-modal').addEventListener('click', event => { if (event.target === event.currentTarget) closeSign(); });
 $('previous-sign').addEventListener('click', () => openSign(activeSign - 1));
 $('next-sign').addEventListener('click', () => openSign(activeSign + 1));
-$('try-sign').addEventListener('click', () => { const label = dictionaryEntries[activeSign].label; closeSign(); showScreen('live'); $('workspace').scrollIntoView({ behavior: 'smooth', block: 'start' }); status(`${label} işarəsini sınayın`, 'Nümunədəki hərəkəti göstərin, sonra kameranı yandırın.'); });
+$('try-sign').addEventListener('click', () => { const entry = dictionaryEntries[activeSign]; $('practice-label').textContent = entry.label; $('practice-image').src = entry.image; $('practice-image').alt = `${entry.label} işarəsinin nümunəsi`; $('practice-card').hidden = false; closeSign(); showScreen('live'); $('workspace').scrollIntoView({ behavior: 'smooth', block: 'start' }); status(`${entry.label} işarəsini sınayın`, 'Nümunədəki hərəkəti göstərin, sonra kameranı yandırın.'); });
 function showScreen(name) { document.querySelectorAll('.app-screen').forEach(screen => screen.hidden = screen.id !== `${name}-screen`); document.querySelectorAll('.app-tab').forEach(tab => tab.classList.toggle('active', tab.dataset.screen === name)); }
 if (document.querySelectorAll) document.querySelectorAll('.app-tab').forEach(tab => tab.addEventListener('click', () => showScreen(tab.dataset.screen)));
 if (document.querySelectorAll) document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => {
